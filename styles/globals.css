@@ -1,0 +1,55 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  main h1 {
+  	@apply text-xl mb-2 font-semibold
+  }
+  main h2 {
+  	@apply text-lg mb-2 font-semibold
+  }
+  main p {
+  	@apply text-base mb-6
+  }
+  main ol {
+  	@apply text-base mb-6 list-decimal list-outside pl-4
+  }
+  main ul {
+  	@apply text-base mb-6 list-disc list-outside pl-4
+  }
+  main li {
+  	@apply text-base pb-3
+  }
+  code {
+  	@apply font-['MonoLisa'] bg-white text-fuchsia-600 text-xs rounded-sm border border-slate-200 px-1 dark:bg-slate-600 dark:border-slate-600 dark:text-slate-300
+  }
+  main a, footer a {
+  	@apply underline text-blue-500
+  }
+  footer {
+  	@apply dark:text-slate-300
+  }
+  footer a {
+  	@apply dark:text-blue-400
+  }
+}
+
+@font-face {
+    font-family: 'MonoLisa';
+    src: url('/fonts/MonoLisaVariableNormal.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'MonoLisa';
+    src: url('/fonts/MonoLisaVariableItalic.woff2') format('woff2');
+    font-weight: normal;
+    font-style: italic;
+}
+
+.logo {
+	font-feature-settings: "ss02";
+	font-style: italic;
+}
