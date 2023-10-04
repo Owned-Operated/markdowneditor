@@ -1,9 +1,11 @@
 import { useState, useEffect } from 'react'
-import MarkdownEditor from '../components/MarkdownEditor'
-import MarkdownPreview from '../components/MarkdownPreview'
+import MarkdownEditor from '@/components/MarkdownEditor'
+import MarkdownPreview from '@/components/MarkdownPreview'
+import defaultMarkdown from '@/markdown/sample.md'
 
 export default function Home() {
-	const [markdownContent, setMarkdownContent] = useState('')
+
+	const [markdownContent, setMarkdownContent] = useState(defaultMarkdown)
 	
 	useEffect(() => {
 		const savedMarkdown = localStorage.getItem('savedMarkdown')
@@ -13,7 +15,12 @@ export default function Home() {
 	}, [])
 	
 	useEffect(() => {
-		localStorage.setItem('savedMarkdown', markdownContent)
+		const savedMarkdown = localStorage.getItem('savedMarkdown')
+		if (savedMarkdown) {
+			setMarkdownContent(savedMarkdown)
+		} else {
+			setMarkdownContent(defaultMarkdown)
+		}
 	}, [markdownContent])
 	
 	const wordCount = markdownContent.split(/\s+/).filter(Boolean).length
