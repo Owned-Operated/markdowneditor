@@ -7,7 +7,7 @@
 		@apply text-3xl mb-2 font-semibold
 	}
 	main h2 {
-		@apply text-2xl mb-2 font-semibold
+		@apply text-2xl mt-4 mb-2 font-semibold
 	}
 	main h3 {
 		@apply text-xl mb-2 font-semibold
@@ -21,14 +21,30 @@
 	main h6 {
 		@apply text-sm mb-2 font-semibold
 	}
+	main h6 + h2,
+	main blockquote + h2,
+	main hr + h2,
+	main pre + h2,
+	main table + h2 {
+		@apply mt-8
+	}
 	main p {
 		@apply text-base mb-6
+	}
+	main p + p {
+		@apply -mt-4
+	}
+	main a, main a:visited {
+		@apply underline
 	}
 	main ol {
 		@apply text-base mb-6 list-decimal list-outside pl-4
 	}
 	main ul {
 		@apply text-base mb-6 list-disc list-outside pl-4
+	}
+	main ul ul {
+		@apply mt-3 mb-0
 	}
 	main li {
 		@apply text-base pb-3
@@ -45,11 +61,9 @@
 	main table {
 		@apply table-auto mb-4 border border-current
 	}
-	main tr {
-		@apply border-b border-current
-	}
+	main th,
 	main td {
-		@apply px-2 py-2
+		@apply px-2 py-2 border border-current
 	}
 	main blockquote {
 		@apply pl-3 border-l-4 border-current italic
