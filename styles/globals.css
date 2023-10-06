@@ -3,68 +3,74 @@
 @tailwind utilities;
 
 @layer base {
-  main h1 {
-  	@apply text-3xl mb-2 font-semibold
-  }
-  main h2 {
-  	@apply text-2xl mb-2 font-semibold
-  }
-  main h3 {
-  	@apply text-xl mb-2 font-semibold
-  }
-  main h4 {
-  	@apply text-lg mb-2 font-semibold
-  }
-  main h5 {
-  	@apply text-base mb-2 font-semibold
-  }
-  main h6 {
-  	@apply text-sm mb-2 font-semibold
-  }
-  main p {
-  	@apply text-base mb-6
-  }
-  main ol {
-  	@apply text-base mb-6 list-decimal list-outside pl-4
-  }
-  main ul {
-  	@apply text-base mb-6 list-disc list-outside pl-4
-  }
-  main li {
-  	@apply text-base pb-3
-  }
-  main hr {
-  	@apply mb-4
-  }
-  main pre {
-  	@apply font-['MonoLisa'] bg-white text-xs rounded-sm border border-slate-200 px-2 py-2 dark:bg-slate-600 dark:border-slate-600 dark:text-slate-300 mb-4
-  }
-  main code {
-  	@apply font-['MonoLisa'] text-xs dark:text-slate-300
-  }
-  main table {
-  	@apply table-auto mb-4
-  }
-  main tr {
-  	@apply border-b border-slate-200
-  }
-  main td {
-  	@apply px-2 py-2
-  }
+	main textarea {
+		@apply focus:outline-none
+	}
+	main h1 {
+		@apply text-3xl mb-2 font-semibold
+	}
+	main h2 {
+		@apply text-2xl mb-2 font-semibold
+	}
+	main h3 {
+		@apply text-xl mb-2 font-semibold
+	}
+	main h4 {
+		@apply text-lg mb-2 font-semibold
+	}
+	main h5 {
+		@apply text-base mb-2 font-semibold
+	}
+	main h6 {
+		@apply text-sm mb-2 font-semibold
+	}
+	main p {
+		@apply text-base mb-6
+	}
+	main ol {
+		@apply text-base mb-6 list-decimal list-outside pl-4
+	}
+	main ul {
+		@apply text-base mb-6 list-disc list-outside pl-4
+	}
+	main li {
+		@apply text-base pb-3
+	}
+	main hr {
+		@apply mb-4 border-current
+	}
+	main pre {
+		@apply font-['MonoLisa'] bg-white text-xs rounded-sm border border-slate-200 px-2 py-2 dark:bg-slate-600 dark:border-slate-600 dark:text-slate-300 mb-4
+	}
+	main code {
+		@apply font-['MonoLisa'] text-xs dark:text-slate-300
+	}
+	main table {
+		@apply table-auto mb-4 border border-current
+	}
+	main tr {
+		@apply border-b border-current
+	}
+	main td {
+		@apply px-2 py-2
+	}
+	main blockquote {
+		@apply pl-3 border-l-4 border-current italic
+	}
 }
 
 @font-face {
-    font-family: 'MonoLisa';
-    src: url('/fonts/MonoLisaVariableNormal.woff2') format('woff2');
-    font-weight: normal;
-    font-style: normal;
+	font-family: 'MonoLisa';
+	src: url('/fonts/MonoLisaVariableNormal.woff2') format('woff2');
+	font-weight: normal;
+	font-style: normal;
 }
 
 @font-face {
-    font-family: 'MonoLisa';
-    src: url('/fonts/MonoLisaVariableItalic.woff2') format('woff2');
-    font-weight: normal;
-    font-style: italic;
+	font-family: 'MonoLisa';
+	src: url('/fonts/MonoLisaVariableItalic.woff2') format('woff2');
+	font-weight: normal;
+	font-style: italic;
 }
 
 .logo {

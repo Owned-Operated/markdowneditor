@@ -47,7 +47,7 @@ export default function Top() {
 		<>
 		<div>
 		  	<nav className="bg-white dark:bg-slate-800 border-b border-slate-200 dark:border-slate-700 font-bold font-system">
-				<div className="mx-auto w-full px-6 lg:px-6">
+				<div className="mx-auto w-full px-6 md:px-9">
 					<div className="flex h-16 items-center justify-between">
 						<div className="flex items-center w-full">
 							<Link href="/" className="flex-shrink-0 normal-case" onClick={(e) => {e.preventDefault();window.location.href = '/';}}>
