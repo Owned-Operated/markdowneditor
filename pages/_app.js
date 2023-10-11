@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 import Layout from '../components/Layout'
 import { useRouter } from 'next/router'
 import Head from 'next/head'
-
+import PlausibleProvider from 'next-plausible'
 import '@/styles/globals.css'
 
 export default function App({ Component, pageProps }) {
@@ -33,7 +33,7 @@ export default function App({ Component, pageProps }) {
 	}, [router.events])
 	
 	return (
-		<>
+		<PlausibleProvider domain="markdowneditor.org">
 		<Head>
 			<title>{pageProps.title}</title>
 			{pageProps.metaTags &&
@@ -57,6 +57,6 @@ export default function App({ Component, pageProps }) {
 				<Component {...pageProps} />
 			</Layout>
 		</div>
-		</>
+		</PlausibleProvider>
 	)
 }
